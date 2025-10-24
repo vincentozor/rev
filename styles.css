@@ -260,7 +260,7 @@
         }
 
         .article-title {
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             margin-bottom: 15px;
             line-height: 1.2;
         }
@@ -711,7 +711,7 @@
             }
 
             .article-title {
-                font-size: 2.2rem;
+                font-size: 1.5rem !important;
             }
 
             .phone-image {
@@ -759,3 +759,28 @@
                 grid-template-columns: 1fr;
             }
         }
+
+
+        .pagination {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #1d4ed8;
+  color: white;
+  border: 1px solid #1d4ed8;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
