@@ -739,6 +739,13 @@
             .articles-grid {
                 grid-template-columns: 1fr;
             }
+
+            .article-meta {
+                font-size: 0.7rem;
+            }
+            .breadcrumb {
+           font-size: 0.8rem;
+        }
         }
 
         @media (max-width: 576px) {
