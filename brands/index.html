@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphone Brands - PhoneSpec Pro</title>
+    <meta name="description" content="Discover smartphones by brand and compare full phone specs, features, prices, and reviews. Explore top brands to find the best phone that fits your needs and budget.">
+    <meta name="author" content="PhoneSpec Pro">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://phonespecpro.com/">
+    <link rel="stylesheet" href="https://phonespecpro.com/styles.css">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Smartphone Brands - PhoneSpec Pro">
+    <meta property="og:description" content="Discover smartphones by brand and compare full phone specs, features, prices, and reviews. Explore top brands to find the best phone that fits your needs and budget.">
+    <meta property="og:url" content="https://phonespecpro.com/brands/">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://phonespecpro.com/img/phonespecpro-logo.png">
+    <meta property="og:site_name" content="PhoneSpec Pro">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Smartphone Brands - PhoneSpec Pro">
+    <meta name="twitter:description" content="Discover smartphones by brand and compare full phone specs, features, prices, and reviews. Explore top brands to find the best phone that fits your needs and budget.">
+    <meta name="twitter:image" content="https://phonespecpro.com/img/phonespecpro-logo.png">
+
+    <!-- Article Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Smartphone Brands - PhoneSpec Pro",
+        "description": "Discover smartphones by brand and compare full phone specs, features, prices, and reviews. Explore top brands to find the best phone that fits your needs and budget.",
+        "image": "https://phonespecpro.com/img/phonespecpro-logo.png",
+        "author": {
+            "@type": "Organization",
+            "name": "PhoneSpec Pro"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PhoneSpec Pro",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://phonespecpro.com/img/phonespecpro-logo.png"
+            }
+        },
+        "datePublished": "2025-10-26",
+        "dateModified": "2025-10-26",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://phonespecpro.com/brands/"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 50px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Filter Section */
+        .filters {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .filter-option {
+            padding: 10px 15px;
+            background: var(--gray);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-option.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Phone Grid */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: var(--dark);
+        }
+
+        .phone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .phone-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .phone-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .phone-image {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+            padding: 20px;
+        }
+
+        .phone-image img {
+            max-height: 160px;
+            transition: transform 0.5s;
+        }
+
+        .phone-card:hover .phone-image img {
+            transform: scale(1.1);
+        }
+
+        .phone-info {
+            padding: 20px;
+        }
+
+        .phone-brand {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .phone-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .phone-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .phone-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .spec-tag {
+            background: var(--gray);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .phone-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>PhoneSpec Pro</span>
+                </div>
+                <div class="nav-links">
+                    <a href="https://phonespecpro.com/">Home</a>
+                    <a href="https://phonespecpro.com/phones/">Phones</a>
+                    <a href="https://phonespecpro.com/compare/">Compare</a>
+                    <a href="https://phonespecpro.com/reviews/">Reviews</a>
+                    <a href="https://phonespecpro.com/news/">News</a>
+                    <a href="https://phonespecpro.com/brands/">Brands</a>
+                    <!-- <a href="#">Deals</a> -->
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search phones...">
+                </div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <div class="mobile-nav-title">Menu</div>
+            <button class="mobile-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search phones...">
+        </div>
+        <div class="mobile-nav-links">
+            <a href="https://phonespecpro.com/"><i class="fas fa-home"></i> Home</a>
+            <a href="https://phonespecpro.com/phones/"><i class="fas fa-mobile-alt"></i> Phones</a>
+            <a href="https://phonespecpro.com/compare/"><i class="fas fa-balance-scale"></i> Compare</a>
+            <a href="https://phonespecpro.com/reviews/"><i class="fas fa-star"></i> Reviews</a>
+            <a href="https://phonespecpro.com/news/"><i class="fas fa-newspaper"></i> News</a>
+            <a href="https://phonespecpro.com/brands/"><i class="fas fa-tags"></i> Brands</a>
+            <!-- <a href="#"><i class="fas fa-percentage"></i> Deals</a> -->
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Find Your Perfect Phone</h1>
+            <p>Compare specifications, read reviews, and make informed decisions with our comprehensive phone database.</p>
+            <a href="#" class="cta-button">Explore Phones</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+
+        <!-- Featured Phones -->
+        <section>
+            <h2 class="section-title">Featured Brands</h2>
+            <div class="phone-grid">
+                <!-- Phone Card 1 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/samsung.webp" alt="Samsung">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Samsung</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/samsung"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 2 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/xiaomi.webp" alt="Xiaomi">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Xiaomi</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/xiaomi"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 3 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/apple.webp" alt="Apple">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Apple</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/apple"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 4 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/google.webp" alt="Google">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Google</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/google"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 5 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/oneplus.webp" alt="OnePlus">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">OnePlus</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/oneplus"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 6 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/oppo.webp" alt="Oppo">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Oppo</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/oppo"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 4 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/vivo.webp" alt="Vivo">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Vivo</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/vivo"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 5 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/asus.webp" alt="Asus">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Asus</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/asus"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 6 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/honor.webp" alt="Honor">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Honor</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/honor"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 4 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/motorola.webp" alt="Motorola">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Motorola</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/motorola"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 5 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/sony.webp" alt="Sony">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Sony</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/sony"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 6 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/nothing.webp" alt="Nothing">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Nothing</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/nothing"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 4 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/tecno.webp" alt="Tecno">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Tecno</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/tecno"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 5 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/huawei.webp" alt="Huawei">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Huawei</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/huawei"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card 6 -->
+                <div class="phone-card">
+                    <div class="phone-image">
+                        <img src="https://phonespecpro.com/img/realme.webp" alt="Realme">
+                    </div>
+                    <div class="phone-info">
+                        <div class="phone-brand"></div>
+                        <h3 class="phone-name">Realme</h3>
+                        <div class="phone-actions">
+                            <a href="https://phonespecpro.com/brands/realme"><button class="btn btn-primary">View Phones</button></a>
+                            <!-- <a href="#"><button class="btn btn-outline">Compare</button></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PhoneSpec Pro</h3>
+                    <p>Your ultimate destination for comprehensive phone specifications, comparisons, and reviews.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://phonespecpro.com/">Home</a></li>
+                        <li><a href="https://phonespecpro.com/phones/">Phone Database</a></li>
+                        <li><a href="https://phonespecpro.com/compare/">Compare Phones</a></li>
+                        <li><a href="https://phonespecpro.com/reviews/">Latest Reviews</a></li>
+                        <li><a href="https://phonespecpro.com/news/">Phone News</a></li>
+                        <li><a href="https://phonespecpro.com/brands/">Phone Brands</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://phonespecpro.com/contact">Contact Us</a></li>
+                        <li><a href="https://phonespecpro.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://phonespecpro.com/terms-of-service">Terms of Service</a></li>
+                    </ul>
+                </div>
+                </div>
+            <div class="copyright">
+                <p>&copy; 2025 PhoneSpec Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script src="https://phonespecpro.com/script.js"></script>
+</body>
+</html>
